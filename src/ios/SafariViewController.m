@@ -1,8 +1,13 @@
 #import "SafariViewController.h"
-
+#define screen_width [ [ UIScreen mainScreen ] bounds ].size.width
+#define screen_height [ [ UIScreen mainScreen ] bounds ].size.height
 @implementation SafariViewController
 {
   SFSafariViewController *vc;
+    
+//    CGRect screenRect ;//= [[UIScreen mainScreen] bounds];
+//    CGFloat screenWidth ;//= screenRect.size.width;
+//    CGFloat screenHeight ;//= screenRect.size.height;
 }
 
 - (void) isAvailable:(CDVInvokedUrlCommand*)command {
@@ -11,6 +16,9 @@
   [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
+-(void)sizeforView:(int)height{
+    
+}
 - (void) show:(CDVInvokedUrlCommand*)command {
   NSDictionary* options = [command.arguments objectAtIndex:0];
   NSString* urlString = options[@"url"];
@@ -47,7 +55,45 @@
       // note that Apple dropped support for other animations in iOS 9.2 or 9.3 in favor of a slide-back gesture
       vc.modalTransitionStyle = [self getTransitionStyle:options[@"transition"]];
     }
-    [self.viewController presentViewController:vc animated:self.animated completion:nil];
+      [self.viewController presentViewController:vc animated:self.animated completion:^{
+//          let frame = safari.view.frame
+//              frame.size = CGSize(width: frame.width, height: frame.height + 44.0)
+//              safari.view.frame = frame
+          CGRect frame = self->vc.view.frame;
+          CGRect screenBounds = [[UIScreen mainScreen] bounds];
+
+          NSLog(@" ----> %f",screenBounds.size.height);
+          if (screenBounds.size.height == 667 ) {
+              frame.size = CGSizeMake(frame.size.width, frame.size.height - 24.0);
+            //  frame.origin = CGPointMake(0, 0.0);
+          }else  if (screenBounds.size.height == 896 ) {
+              frame.size = CGSizeMake(frame.size.width, frame.size.height + 84.0);
+              frame.origin = CGPointMake(0, 40.0);
+          }
+          else if (screenBounds.size.height == 812 ) {
+              frame.size = CGSizeMake(frame.size.width, frame.size.height + 84.0);
+              frame.origin = CGPointMake(0, 40.0);
+          }
+         else if (screenBounds.size.height == 844 ) {
+              frame.size = CGSizeMake(frame.size.width, frame.size.height + 84.0);
+              frame.origin = CGPointMake(0, 40.0);
+          }
+         else if (screenBounds.size.height == 926 ) {
+              frame.size = CGSizeMake(frame.size.width, frame.size.height + 84.0);
+              frame.origin = CGPointMake(0, 40.0);
+          }
+         else if (screenBounds.size.height == 780 ) {
+              frame.size = CGSizeMake(frame.size.width, frame.size.height + 84.0);
+              frame.origin = CGPointMake(0, 40.0);
+          }
+//          if (screen_height == 667 ) {
+//              frame.size = CGSizeMake(frame.size.width, frame.size.height + 84.0);
+//              frame.origin = CGPointMake(0, 40.0);
+//          }
+//          frame.origin = CGPointMake(0, 40.0);
+          self->vc.view.frame = frame;
+          
+      }];
   }
 
   NSString *tintColor = options[@"tintColor"];
@@ -149,6 +195,18 @@
     [pluginResult setKeepCallback:[NSNumber numberWithBool:YES]];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:self.callbackId];
   }
+//    let f = CGRect(origin: CGPoint(x: 0, y: svc!.view.frame.size.height - 40),
+//                   size: CGSize(width: self.view.frame.width, height: 120))
+//    let uglyView = UIView(frame: f)
+//    uglyView.backgroundColor = .white//svc?.view.backgroundColor
+//    controller.view.addSubview(uglyView)
+    
+//    CGRect fra = CGRectMake(0,vc.view.frame.size.height - 120 , vc.view.frame.size.width, 150);
+//    UIView *view = [[UIView alloc]initWithFrame:fra];
+//    view.backgroundColor = [UIColor whiteColor];
+//    [controller.view addSubview:view];
+    
+    
 }
 
 - (NSArray<UIActivity *> *)safariViewController:(SFSafariViewController *)
