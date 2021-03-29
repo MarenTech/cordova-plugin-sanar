@@ -1,0 +1,37 @@
+{
+  "name": "cordova-plugin-safariviewcontroller",
+  "version": "2.0.0",
+  "description": "Forget InAppBrowser for iOS - this is way better for displaying read-only web content in your PhoneGap app.",
+  "cordova": {
+    "id": "cordova-plugin-safariviewcontroller",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarenTech/cordova-plugin-sanar.git"
+  },
+  "keywords": [
+    "InAppBrowser",
+    "InAppSafariBrowser",
+    "Safari",
+    "Safari ViewController",
+    "Chrome Custom Tabs",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Abdul Aziz <aziz@marensolutions.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MarenTech/cordova-plugin-sanar/issues"
+  },
+  "homepage": "https://github.com/MarenTech/cordova-plugin-sanar#readme"
+}
