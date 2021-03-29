@@ -3,7 +3,7 @@ Example Project.
 
 ## Description
 
-Demo Project for Sanar consultation integratoin
+Demo Project for Sanar video consultation integratoin
 
 ## Installation
 To install the platforms
