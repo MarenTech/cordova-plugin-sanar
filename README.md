@@ -13,4 +13,5 @@ $ cordova plugin add https://github.com/MarenTech/cordova-plugin-sanar
 ```
 
 ## Usage
-Check the [demo code](demo/) to follow the integration / code example.
+Check the [example](example/) to follow the integration / code example.
+
