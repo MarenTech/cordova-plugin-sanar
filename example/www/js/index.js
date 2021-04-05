@@ -30,7 +30,7 @@ function onDeviceReady() {
 }
 
 function startChat() {
-    let url = "https://webprelive.litedev.com/bupa/c8NQD9ugZ72FV1dRdFcUypLzhjg7jS4Oymvur33xgo8ids%2BLcw5uQWBDDibftTVoSJtvCyAiBbawk77FiMG63lyx7MuEum3rJhJacNo8zBfkSpcEygTSg%2FpnQBzmftEDHvQpBQtNMBOC8AcLo96lflGoDXxDeYDYZfYBzR2YvlDQ5o7LBzl%2FjLQbh7SHie60c8mtfOOopGTnuVgLhKGG7KgCHPb69C3zdxEPY5DRCAolTOExTb1ZYDrFDkvTVQ%2Bn6nbyHDu%2FYI9wTbLbH3YWgAQzWllsg1bZ0v7joB9xcqQ%3D" // Sanar Chat URL with SANAR_TOKEN
+    let url = "https://webprelive.litedev.com/bupa/c8NQD9ugZ72FV1dRdFcUypLzhjg7jS4Oymvur33xgo8ids%2BLcw5uQWBDDibftTVoSJtvCyAiBbawk77FiMG63lyx7MuEum3rJhJacNo8zBfkSpcEygTSg%2FpnQBzmftEDHvQpBQtNMBOC8AcLo96lflGoDXxDeYDYZfYBzR2YvlDGWaB5yhHmwtO18TqvFwyCT4Bjd%2FIjWw%2FtOlvLU4vEHqlKR3OvvV5eINZ8K64vJQvPBZ1dbqIJe4Np%2FgnuCf8X3ADe6qELUH8th2e%2B3YHkM4ElNQTmKhhNLQqAdOWmRsQ%3D" // Sanar Chat URL with SANAR_TOKEN
     if(!url) {
         alert("Request Sanar Url");
         return
